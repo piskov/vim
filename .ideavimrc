@@ -1,0 +1,43 @@
+source ~/.vimrc
+
+" plugins
+set commentary
+set highlightedyank
+
+" ideavim settings
+set ideajoin
+set ideastatusicon=gray
+set visualbell
+
+" save/close
+noremap <leader>q :action CloseEditor<CR>
+noremap <leader>w :action SaveDocument<CR>
+
+" refactor code
+noremap <leader>e :action ExtractMethod<CR>
+noremap <leader>r :action RenameElement<CR>
+noremap <leader>s :action SurroundWith<CR>
+
+" format code
+noremap <leader>f :action ReformatCode<CR>
+noremap <leader>F :action ShowReformatFileDialog<CR>
+
+" run code
+noremap <leader>b :action BuildSolutionAction<CR>
+noremap <leader>d :action Debug<CR>
+noremap <leader>D :action Stop<CR>
+
+" tab controls
+noremap <leader>l :action MoveEditorToOppositeTabGroup<CR>
+noremap <leader>L :action MoveTabRight<CR>
+
+" navigation
+noremap <leader>o :action FileStructurePopup<CR>
+noremap <leader>g :action GotoImplementation<CR>
+noremap ]c :action VcsShowNextChangeMarker<CR>
+noremap [c :action VcsShowPrevChangeMarker<CR>
+noremap ]m :action MethodDown<CR> 
+noremap [m :action MethodUp<CR> 
+
+vnoremap v :action EditorSelectWord<CR>
+vnoremap V :action EditorUnSelectWord<CR>
