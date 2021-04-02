@@ -8,6 +8,7 @@ set highlightedyank
 set ideajoin
 set ideastatusicon=gray
 set visualbell
+set NERDTree
 
 " save/close
 noremap <leader>q :action CloseEditor<CR>
@@ -32,8 +33,11 @@ noremap <leader>l :action MoveEditorToOppositeTabGroup<CR>
 noremap <leader>L :action MoveTabRight<CR>
 
 " navigation
+noremap <leader>t :NERDTree<CR>
 noremap <leader>o :action FileStructurePopup<CR>
 noremap <leader>g :action GotoImplementation<CR>
+noremap [e :action GotoPreviousError<CR>
+noremap ]e :action GotoNextError<CR>
 noremap ]c :action VcsShowNextChangeMarker<CR>
 noremap [c :action VcsShowPrevChangeMarker<CR>
 noremap ]m :action MethodDown<CR> 
