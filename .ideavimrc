@@ -1,8 +1,11 @@
 source ~/.vimrc
 
 " plugins
+set argtextobj
 set commentary
 set highlightedyank
+set textobj-indent
+set vim-paragraph-motion
 
 " ideavim settings
 set ideajoin
