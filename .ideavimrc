@@ -4,14 +4,17 @@ source ~/.vimrc
 set argtextobj
 set commentary
 set highlightedyank
+set multiple-cursors
 set textobj-indent
 set vim-paragraph-motion
 
 " ideavim settings
 set ideajoin
 set ideastatusicon=gray
-set visualbell
 set NERDTree
+set matchit
+set visualbell
+
 
 " save/close
 noremap <leader>q :action CloseEditor<CR>
