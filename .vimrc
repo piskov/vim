@@ -1,20 +1,20 @@
 " plugins
 set easymotion
-set surround
 set ReplaceWithRegister
+set surround
 
 " line numbers
-set relativenumber
 set number
+set relativenumber
 
 " sensible search
-set ignorecase
-set smartcase
-set incsearch
 set hlsearch
+set ignorecase
+set incsearch
+set smartcase
 
 " sensible scroll
-set scrolloff=1
+set scrolloff=5
 set sidescrolloff=5
 
 " leader
@@ -30,6 +30,16 @@ noremap <leader>y "+y
 noremap <leader>p "+p
 noremap <leader>P "+P
 
+" tabs
+nnoremap <TAB> gt
+nnoremap <s-TAB> gT
+
 noremap <leader>a ggVG
 noremap <leader>v <C-v>
 noremap <leader>u ~
+
+vnoremap < <gv
+vnoremap > >gv
+
+noremap <CR> o<Esc>
+noremap <S-CR> I<CR><Esc>k^

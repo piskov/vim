@@ -1,15 +1,16 @@
 " line numbers
-set relativenumber
 set number
+set relativenumber
 
 " sensible search
-set ignorecase
-set smartcase
-set incsearch
 set hlsearch
+set ignorecase
+set incsearch
+set smartcase
 
 " sensible scroll
-set scrolloff=1
+set scrolloff=5
+set sidescrolloff=5
 
 " leader
 map <SPACE> <leader>
