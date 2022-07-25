@@ -42,4 +42,4 @@ vnoremap < <gv
 vnoremap > >gv
 
 noremap <CR> o<Esc>
-noremap <S-CR> I<CR><Esc>k^
+noremap <s-CR> I<CR><Esc>k^

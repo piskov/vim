@@ -4,20 +4,24 @@ source ~/.vimrc
 set argtextobj
 set commentary
 set highlightedyank
+set matchit
 set multiple-cursors
+set NERDTree
 set textobj-indent
 set vim-paragraph-motion
 
 " ideavim settings
 set ideajoin
 set ideastatusicon=gray
-set NERDTree
-set matchit
 set visualbell
 
 
 " save/close
-noremap <leader>q :action CloseEditor<CR>
+if &ide =~? "DataSpell"
+    noremap <leader>q :action CloseContent<CR>
+else
+    noremap <leader>q :action CloseEditor<CR>
+endif
 noremap <leader>w :action SaveDocument<CR>
 
 " refactor code
@@ -31,8 +35,15 @@ noremap <leader>F :action ShowReformatFileDialog<CR>
 
 " run code
 noremap <leader>b :action BuildSolutionAction<CR>
-noremap <leader>d :action Debug<CR>
-noremap <leader>D :action Stop<CR>
+if &ide =~? "DataSpell"
+    noremap <leader>d :action JupyterDebugAction<CR>
+    noremap <leader>D :action NotebookRunAllAction<CR>
+    noremap <leader>C :action NotebookRunAllAboveAction<CR>
+    noremap <leader>c :action NotebookRunCellAction<CR>
+else
+    noremap <leader>d :action Debug<CR>
+    noremap <leader>D :action Stop<CR>
+endif
 
 " tab controls
 noremap <leader>l :action MoveEditorToOppositeTabGroup<CR>
