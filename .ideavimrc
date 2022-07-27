@@ -1,20 +1,9 @@
 source ~/.vimrc
 
-" plugins
-set argtextobj
-set commentary
-set highlightedyank
-set matchit
-set multiple-cursors
-set NERDTree
-set textobj-indent
-set vim-paragraph-motion
-
 " ideavim settings
 set ideajoin
 set ideastatusicon=gray
 set visualbell
-
 
 " save/close
 if &ide =~? "DataSpell"
@@ -57,8 +46,8 @@ noremap [e :action GotoPreviousError<CR>
 noremap ]e :action GotoNextError<CR>
 noremap ]c :action VcsShowNextChangeMarker<CR>
 noremap [c :action VcsShowPrevChangeMarker<CR>
-noremap ]m :action MethodDown<CR> 
-noremap [m :action MethodUp<CR> 
+noremap ]m :action MethodDown<CR>
+noremap [m :action MethodUp<CR>
 
 vnoremap v :action EditorSelectWord<CR>
 vnoremap V :action EditorUnSelectWord<CR>
