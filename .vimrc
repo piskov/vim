@@ -1,5 +1,6 @@
 " Uncomment next two blocks on first run to install vim-plug engine and plugins
 " Call :PlugUpdate and :PlugUpgrade from time to time to update
+"
 " " Install vim-plug if not found
 " if empty(glob('~/.vim/autoload/plug.vim'))
 "   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -24,14 +25,23 @@ Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'tpope/vim-surround'
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'dbakker/vim-paragraph-motion'
+
+Plug 'agudulin/vim-colors-alabaster' " color theme
 call plug#end()
 
-syntax on
+syntax on " syntax highlighting
+
+" color theme
+color alabaster
+hi link EasyMotionTarget Search
+hi link EasyMotionTarget2First Search
+hi link EasyMotionTarget2Second Search
 
 " line and column numbers
 set number
 set relativenumber
 set ruler
+set colorcolumn=80,100
 
 " sensible search
 set hlsearch
@@ -40,6 +50,7 @@ set incsearch
 set smartcase
 
 " sensible scroll
+set nowrap " no line wrapping by default
 set scrolloff=5
 set sidescrolloff=5
 
@@ -85,7 +96,9 @@ if !has('nvim') && &ttimeoutlen == -1
   set ttimeoutlen=100
 endif
 
+set showcmd
 set wildmenu
 set display+=lastline
+set display+=truncate " Show @@@ in the last line if it is truncated
 
 set autoread
