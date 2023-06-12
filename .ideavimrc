@@ -6,15 +6,20 @@ set ideastatusicon=gray
 set visualbell
 
 " save/close
+noremap <leader>w :action SaveDocument<CR>
 if &ide =~? "DataSpell"
     noremap <leader>q :action CloseContent<CR>
 else
     noremap <leader>q :action CloseEditor<CR>
 endif
-noremap <leader>w :action SaveDocument<CR>
+
 
 " refactor code
-noremap <leader>e :action ExtractMethod<CR>
+noremap <leader>em :action ExtractMethod<CR>
+noremap <leader>ec :action IntroduceConstant<CR>
+noremap <leader>ef :action IntroduceField<CR>
+noremap <leader>ep :action IntroduceParameter<CR>
+noremap <leader>ev :action IntroduceVariable<CR>
 noremap <leader>r :action RenameElement<CR>
 noremap <leader>s :action SurroundWith<CR>
 
@@ -39,7 +44,6 @@ noremap <leader>l :action MoveEditorToOppositeTabGroup<CR>
 noremap <leader>L :action MoveTabRight<CR>
 
 " navigation
-noremap <leader>t :NERDTree<CR>
 noremap <leader>o :action FileStructurePopup<CR>
 noremap <leader>g :action GotoImplementation<CR>
 noremap [e :action GotoPreviousError<CR>

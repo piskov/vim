@@ -26,7 +26,7 @@ Plug 'tpope/vim-surround'
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'dbakker/vim-paragraph-motion'
 
-Plug 'agudulin/vim-colors-alabaster' " color theme
+Plug 'agudulin/vim-colors-alabaster'
 call plug#end()
 
 syntax on " syntax highlighting
@@ -48,11 +48,15 @@ set hlsearch
 set ignorecase
 set incsearch
 set smartcase
+nnoremap n nzzzv
+nnoremap N Nzzzv
 
 " sensible scroll
 set nowrap " no line wrapping by default
 set scrolloff=5
 set sidescrolloff=5
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
 
 " leader
 map <SPACE> <leader>
@@ -72,6 +76,7 @@ nnoremap <TAB> gt
 nnoremap <s-TAB> gT
 
 " quick actions
+noremap <leader>t :NERDTree<CR>
 noremap <leader>a ggVG
 noremap <leader>v <C-v>
 noremap <leader>u ~
@@ -96,6 +101,7 @@ if !has('nvim') && &ttimeoutlen == -1
   set ttimeoutlen=100
 endif
 
+set showmode
 set showcmd
 set wildmenu
 set display+=lastline
