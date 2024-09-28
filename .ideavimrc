@@ -20,6 +20,7 @@ noremap <leader>ec :action IntroduceConstant<CR>
 noremap <leader>ef :action IntroduceField<CR>
 noremap <leader>ep :action IntroduceParameter<CR>
 noremap <leader>ev :action IntroduceVariable<CR>
+noremap <leader>er :action Refactorings.QuickListPopupAction<CR>
 noremap <leader>r :action RenameElement<CR>
 noremap <leader>s :action SurroundWith<CR>
 

@@ -25,9 +25,19 @@ noremap <leader>y "+y
 noremap <leader>p "+p
 noremap <leader>P "+P
 
+" tabs
+nnoremap <TAB> gt
+nnoremap <s-TAB> gT
+
 noremap <leader>a ggVG
 noremap <leader>v <C-v>
 noremap <leader>u ~
+
+vnoremap < <gv
+vnoremap > >gv
+
+noremap <CR> o<Esc>
+noremap <S-CR> I<CR><Esc>k^
 
 noremap <C-O> :vsc View.NavigateBackward<CR>
 noremap <C-I> :vsc View.NavigateForward<CR>

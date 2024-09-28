@@ -16,6 +16,8 @@
 call plug#begin()
 Plug 'vim-scripts/argtextobj.vim'
 Plug 'tpope/vim-commentary'
+Plug 'github/copilot.vim'
+" Plug 'jlcrochet/vim-cs'
 Plug 'easymotion/vim-easymotion'
 Plug 'machakann/vim-highlightedyank'
 Plug 'chrisbra/matchit'
@@ -33,6 +35,7 @@ syntax on " syntax highlighting
 
 " color theme
 color alabaster
+
 hi link EasyMotionTarget Search
 hi link EasyMotionTarget2First Search
 hi link EasyMotionTarget2Second Search
@@ -41,7 +44,7 @@ hi link EasyMotionTarget2Second Search
 set number
 set relativenumber
 set ruler
-set colorcolumn=80,100
+set colorcolumn=80
 
 " sensible search
 set hlsearch
