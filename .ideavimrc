@@ -13,7 +13,6 @@ else
     noremap <leader>q :action CloseEditor<CR>
 endif
 
-
 " refactor code
 noremap <leader>em :action ExtractMethod<CR>
 noremap <leader>ec :action IntroduceConstant<CR>
@@ -46,7 +45,12 @@ noremap <leader>L :action MoveTabRight<CR>
 
 " navigation
 noremap <leader>o :action FileStructurePopup<CR>
-noremap <leader>g :action GotoImplementation<CR>
+noremap <leader>gi :action GotoImplementation<CR>
+noremap <leader>gu :action ShowUsages<CR>
+noremap <leader>gt :action GotoTest<CR>
+noremap <leader>gd :action GotoDeclaration<CR>
+noremap <leader>gm :action GotoFileMember<CR>
+
 noremap [e :action GotoPreviousError<CR>
 noremap ]e :action GotoNextError<CR>
 noremap ]c :action VcsShowNextChangeMarker<CR>
