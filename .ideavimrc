@@ -3,60 +3,69 @@ source ~/.vimrc
 " ideavim settings
 set ideajoin
 set ideastatusicon=gray
+set peekaboo
 set visualbell
 
+" quickscope
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+set quickscope
+
 " save/close
-noremap <leader>w :action SaveDocument<CR>
+noremap <Leader>w <Action>(SaveDocument)
 if &ide =~? "DataSpell"
-    noremap <leader>q :action CloseContent<CR>
+    nmap <Leader>q <Action>(CloseContent)
 else
-    noremap <leader>q :action CloseEditor<CR>
+    nmap <Leader>aq <Action>(CloseEditor)
 endif
 
 " refactor code
-noremap <leader>em :action ExtractMethod<CR>
-noremap <leader>ec :action IntroduceConstant<CR>
-noremap <leader>ef :action IntroduceField<CR>
-noremap <leader>ep :action IntroduceParameter<CR>
-noremap <leader>ev :action IntroduceVariable<CR>
-noremap <leader>er :action Refactorings.QuickListPopupAction<CR>
-noremap <leader>r :action RenameElement<CR>
-noremap <leader>s :action SurroundWith<CR>
+map <Leader>em <Action>(ExtractMethod)
+map <Leader>ec <Action>(IntroduceConstant)
+map <Leader>ef <Action>(IntroduceField)
+map <Leader>ep <Action>(IntroduceParameter)
+map <Leader>ev <Action>(IntroduceVariable)
+map <Leader>er <Action>(Refactorings.QuickListPopupAction)
+map <Leader>r <Action>(RenameElement)
+map <Leader>s <Action>(SurroundWith)
 
 " format code
-noremap <leader>f :action ReformatCode<CR>
-noremap <leader>F :action ShowReformatFileDialog<CR>
+map <Leader>f <Action>(ReformatCode)
+map <Leader>F <Action>(ShowReformatFileDialog)
 
 " run code
-noremap <leader>b :action BuildSolutionAction<CR>
+nmap <Leader>b <Action>(BuildSolutionAction)
 if &ide =~? "DataSpell"
-    noremap <leader>d :action JupyterDebugAction<CR>
-    noremap <leader>D :action NotebookRunAllAction<CR>
-    noremap <leader>C :action NotebookRunAllAboveAction<CR>
-    noremap <leader>c :action NotebookRunCellAction<CR>
+    nmap <Leader>d <Action>(JupyterDebugAction)
+    nmap <Leader>D <Action>(NotebookRunAllAction)
+    nmap <Leader>C <Action>(NotebookRunAllAboveAction)
+    nmap <Leader>c <Action>(NotebookRunCellAction)
 else
-    noremap <leader>d :action Debug<CR>
-    noremap <leader>D :action Stop<CR>
+    nmap <Leader>d <Action>(Debug)
+    nmap <Leader>D <Action>(Stop)
 endif
 
 " tab controls
-noremap <leader>l :action MoveEditorToOppositeTabGroup<CR>
-noremap <leader>L :action MoveTabRight<CR>
+nmap <Leader>l <Action>(MoveEditorToOppositeTabGroup)
+nmap <Leader>L <Action>(MoveTabRight)
 
 " navigation
-noremap <leader>o :action FileStructurePopup<CR>
-noremap <leader>gi :action GotoImplementation<CR>
-noremap <leader>gu :action ShowUsages<CR>
-noremap <leader>gt :action GotoTest<CR>
-noremap <leader>gd :action GotoDeclaration<CR>
-noremap <leader>gm :action GotoFileMember<CR>
+nmap <Leader>t :NERDTree<CR>
+nmap <Leader>o <Action>(FileStructurePopup)
 
-noremap [e :action GotoPreviousError<CR>
-noremap ]e :action GotoNextError<CR>
-noremap ]c :action VcsShowNextChangeMarker<CR>
-noremap [c :action VcsShowPrevChangeMarker<CR>
-noremap ]m :action MethodDown<CR>
-noremap [m :action MethodUp<CR>
+nmap <Leader>gd <Action>(GotoImplementation)
+nmap <Leader>gu <Action>(ShowUsages)
+nmap <Leader>gt <Action>(GotoTest)
+nmap <Leader>gi <Action>(GotoDeclaration)
+nmap <Leader>gm <Action>(GotoFileMember)
 
-vnoremap v :action EditorSelectWord<CR>
-vnoremap V :action EditorUnSelectWord<CR>
+map [e <Action>(GotoPreviousError)
+map ]e <Action>(GotoNextError)
+map ]c <Action>(VcsShowNextChangeMarker)
+map [c <Action>(VcsShowPrevChangeMarker)
+map ]m <Action>(MethodDown)
+map [m <Action>(MethodUp)
+
+vmap v <Action>(EditorSelectWord)
+vmap V <Action>(EditorUnSelectWord)
+
+map <Leader>/ <Action>(ToggleRenderedDocPresentationForAll)

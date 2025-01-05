@@ -17,7 +17,7 @@ call plug#begin()
 Plug 'vim-scripts/argtextobj.vim'
 Plug 'tpope/vim-commentary'
 Plug 'github/copilot.vim'
-" Plug 'jlcrochet/vim-cs'
+Plug 'jlcrochet/vim-cs'
 Plug 'easymotion/vim-easymotion'
 Plug 'machakann/vim-highlightedyank'
 Plug 'chrisbra/matchit'
